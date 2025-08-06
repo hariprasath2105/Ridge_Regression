@@ -84,11 +84,12 @@ Then visit: [http://localhost:5000](http://localhost:5000)
 **Input**:
 - Petal Length: 4.5
 - Petal Width: 1.3
+<img width="1292" height="477" alt="image" src="https://github.com/user-attachments/assets/8a9ded2c-f9c0-4465-83f8-a8f65bb713d1" />
+
 
 **Output**:
-```
-Predicted Species: Iris-versicolor
-```
+<img width="1278" height="452" alt="image" src="https://github.com/user-attachments/assets/3d4f71d9-43b5-4ba3-8a62-b7b49ab3df63" />
+
 
 ---
 
