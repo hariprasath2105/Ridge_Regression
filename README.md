@@ -11,8 +11,8 @@ It uses **Ridge Regression** for modeling and is deployed as an interactive **Gr
 ```
 house-price-ridge/
 │
-├── train_model.py 
-├── app_gradio.py 
+├── model.py 
+├── app.py 
 ├── model.pkl 
 ├── scaler.pkl 
 └── README.md
@@ -56,7 +56,7 @@ python model.py
 python app.py
 ```
 
-Then visit: ([http://127.0.0.1:7860])
+Then visit: [http://127.0.0.1:7860]
 
 ---
 
