@@ -1,93 +1,84 @@
+# 🏠 House Price Estimation using Ridge Regression (Gradio App)
 
-# 🌸 Iris Flower Species Predictor (Naive Bayes + Flask)
-
-This is a simple Flask web application that uses a **Naive Bayes classifier** to predict the species of an Iris flower based on **only two inputs**: Petal Length and Petal Width.
-
----
-
-## 🧠 Overview
-
-The app is built using:
-- **Python**
-- **Flask** (for the backend)
-- **HTML/CSS** (for a simple UI)
-- **scikit-learn** (for machine learning)
-
-The model was trained on the classic **Iris dataset** using only the most informative features: `PetalLength` and `PetalWidth`.
+## 📌 Project Overview
+This project predicts **median house value** based on selected housing features using the **California Housing dataset**.  
+It uses **Ridge Regression** for modeling and is deployed as an interactive **Gradio** web app.
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
-iris-naivebayes-app/
+house-price-ridge/
 │
-├── model.py               # Trains and saves the model and label encoder
-├── iris.data              # Raw dataset
-├── model.pkl              # Trained Naive Bayes model
-├── label_encoder.pkl      # LabelEncoder to decode predictions
-├── app.py                 # Flask app
-├── templates/
-│   └── index.html         # Web interface
-├── static/
-│   └── style.css          # Gradient-styled UI
-└── README.md              # This file
+├── train_model.py 
+├── app_gradio.py 
+├── model.pkl 
+├── scaler.pkl 
+└── README.md
 ```
 
 ---
 
-## 🚀 How It Works
+## ⚙️ How It Works
+1. **Data Source**  
+   The model uses the **California Housing dataset** provided by `sklearn.datasets`.
 
-1. User inputs:
-   - Petal Length (cm)
-   - Petal Width (cm)
+2. **Feature Selection**  
+   The top 4 most correlated features with the target (`MedHouseVal`) are selected:
+   - `MedInc` → Median income in the block (in $10,000s)  
+   - `AveRooms` → Average number of rooms per household  
+   - `AveOccup` → Average number of household members  
+   - `HouseAge` → Median age of houses in the block
 
-2. The Flask backend sends these to the pre-trained model (`model.pkl`)
-3. The model predicts one of:
-   - `Iris-setosa`
-   - `Iris-versicolor`
-   - `Iris-virginica`
+3. **Model**  
+   A **Ridge Regression** model is trained on scaled features.
 
-4. Result is shown on the webpage.
+4. **Deployment**  
+   The trained model is deployed using **Gradio** with a simple, styled interface.
 
 ---
 
 ## 🔧 Installation
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/iris-naivebayes-app.git
-cd iris-naivebayes-app
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 ```bash
 pip install flask scikit-learn pandas numpy
 ```
 
-### 3. Train the Model (if not already)
+### 2. Train the Model (if not already)
 ```bash
 python model.py
 ```
 
-### 4. Run the Flask App
+### 3. Run the Gradio App
 ```bash
 python app.py
 ```
 
-Then visit: [http://localhost:5000](http://localhost:5000)
+Then visit: ([http://127.0.0.1:7860])
 
 ---
 
 ## 🖥️ Sample UI
 
 **Input**:
-- Petal Length: 4.5
-- Petal Width: 1.3
+```
+| Feature                      | Example Value |
+| ---------------------------- | ------------- |
+| Median Income (MedInc)       | 5.0           |
+| Average Rooms (AveRooms)     | 6.0           |
+| Average Occupants (AveOccup) | 3.0           |
+| House Age (HouseAge)         | 20            |
+```
 <img width="1292" height="477" alt="image" src="https://github.com/user-attachments/assets/8a9ded2c-f9c0-4465-83f8-a8f65bb713d1" />
 
 
 **Output**:
+```
+Predicted Value (in $100k units): 2.35
+Predicted Value (USD): $235,000
+```
 <img width="1278" height="452" alt="image" src="https://github.com/user-attachments/assets/3d4f71d9-43b5-4ba3-8a62-b7b49ab3df63" />
 
 
