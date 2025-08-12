@@ -1,12 +1,11 @@
-# 🏠 House Price Estimation using Ridge Regression (Gradio App)
+# House Price Estimation using Ridge Regression
 
-## 📌 Project Overview
 This project predicts **median house value** based on selected housing features using the **California Housing dataset**.  
 It uses **Ridge Regression** for modeling and is deployed as an interactive **Gradio** web app.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 house-price-ridge/
@@ -19,8 +18,25 @@ house-price-ridge/
 ```
 
 ---
+## Tech Stack
 
-## ⚙️ How It Works
+| Technology     | Use                  |
+|----------------|----------------------|
+| Python         | Core language        |
+| scikit-learn   | Machine Learning     |
+| Pandas         | Data manipulation    |
+| NumPy          | Numeric operations   |
+| Gradio         | Web-based UI         |
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-FF6B81?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
+---
+
+## How It Works
 1. **Data Source**  
    The model uses the **California Housing dataset** provided by `sklearn.datasets`.
 
@@ -39,7 +55,7 @@ house-price-ridge/
 
 ---
 
-## 🔧 Installation
+## Installation
 
 ### 1. Install Dependencies
 ```bash
@@ -60,7 +76,7 @@ Then visit: [http://127.0.0.1:7860]
 
 ---
 
-## 🖥️ Sample UI
+## Sample UI
 
 **Input**:
 ```
@@ -81,16 +97,4 @@ Predicted Value (USD): $235,000
 ```
 <img width="1278" height="452" alt="image" src="https://github.com/user-attachments/assets/3d4f71d9-43b5-4ba3-8a62-b7b49ab3df63" />
 
-
 ---
-
-## 🙋‍♂️ Author
-
-**Hari Prasath S**  
-[GitHub Profile](https://github.com/hariprasath2105)
-
----
-
-## 📘 License
-
-This project is open source and free to use.
